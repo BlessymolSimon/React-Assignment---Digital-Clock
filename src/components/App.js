@@ -2,15 +2,15 @@ import React, { Component, useState } from "react";
 import '../styles/App.css';
 
 class App extends Component {
-    render() {
-        constructor(props)
-        {
-            Super(props);
-            this.state = {
-                time: new Date()
-            }
-            this.intervalid = null;
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            time: new Date()
         }
+        this.intervalid = null;
+    }
+    render() {
         return (
             <div className="Clock">
                 <h3 id="time">{this.getTimeString()}</h3>
@@ -19,7 +19,7 @@ class App extends Component {
     }
     componentDidMount() {
         this.intervalid= setInterval(
-            () => this.setState({time: new Date()}),
+            () => { this.setState({time: new Date()})},
             1*1000
         );
     }
@@ -41,7 +41,7 @@ class App extends Component {
     }
 
     toTwoDigits(num) {
-        return ((num<10 ? "0":"")+num);
+        return `${num<10 ? "0":""}${num}`;
     }
 }
 
