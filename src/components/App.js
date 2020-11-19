@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import '../styles/App.css';
 
-class App extends Component {
+class App extends Component {o
     constructor(props)
     {
         super(props);
@@ -33,7 +33,7 @@ class App extends Component {
         const [hrs, mins, secs] = [currTime.getHours(), currTime.getMinutes(), currTime.getSeconds()];
         const amOrpm = hrs > 12 ? "AM" : "PM";
         const hrstwelveHrForm = hrs>12 ? hrs - 12 : hrs;
-        const hrString=this.toTwoDigits(hrstwelveHrForm);
+        const hrString=""+(hrstwelveHrForm);
         const minString=this.toTwoDigits(mins);
         const secString=this.toTwoDigits(secs);
         const timeString = `${hrString}:${minString}:${secString} ${amOrpm}`;
