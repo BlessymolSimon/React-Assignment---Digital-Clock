@@ -8,7 +8,7 @@ class App extends Component {o
         this.state = {
             time: new Date()
         }
-        this.intervalid = null;
+        this.interval_id = null;
     }
     render() {
         return (
@@ -18,14 +18,14 @@ class App extends Component {o
         );
     }
     componentDidMount() {
-        this.intervalid= setInterval(
+        this.interval_id= setInterval(
             () => { this.setState({time: new Date()})},
             1*1000
         );
     }
 
     componentWillUnmount() {
-        clearInterval(this.intervalid);
+        clearInterval(this.interval_id);
     }
 
     getTimeString() {
