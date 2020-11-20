@@ -1,14 +1,14 @@
 import React, { Component, useState } from "react";
 import '../styles/App.css';
 
-class App extends Component {o
+class App extends Component {
     constructor(props)
     {
         super(props);
         this.state = {
             time: new Date()
         }
-        this.interval_id = null;
+        this.intervalid = null;
     }
     render() {
         return (
@@ -18,14 +18,14 @@ class App extends Component {o
         );
     }
     componentDidMount() {
-        this.interval_id= setInterval(
+        this.intervalid= setInterval(
             () => { this.setState({time: new Date()})},
             1*1000
         );
     }
 
     componentWillUnmount() {
-        clearInterval(this.interval_id);
+        clearInterval(this.intervalid);
     }
 
     getTimeString() {
