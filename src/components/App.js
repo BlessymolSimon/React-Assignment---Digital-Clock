@@ -31,7 +31,7 @@ class App extends Component {
     getTimeString() {
         const currTime = this.state.time;
         const [hrs, mins, secs] = [currTime.getHours(), currTime.getMinutes(), currTime.getSeconds()];
-        const amOrpm = hrs > 12 ? "AM" : "PM";
+        const amOrpm = hrs >= 12 ? "PM" : "AM";
         const hrstwelveHrForm = hrs>12 ? hrs - 12 : hrs;
         const hrString=""+(hrstwelveHrForm);
         const minString=this.toTwoDigits(mins);
